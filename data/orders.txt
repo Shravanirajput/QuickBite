@@ -1,0 +1,5 @@
+1001|Shravani|101|COMPLETED|126.00|Cold Coffee x 2;
+1002|shravani|12|PLACED|231.00|Veg Sandwich x 2;Cold Coffee x 2;
+1003|shravani|12|CANCELLED|147.00|Masala Chai x 2;Samosa Plate x 2;
+1004|shravani|12|PLACED|84.00|French Fries x 1;
+1005|rituja|15|PREPARING|220.50|Paneer Wrap x 2;Masala Chai x 1;

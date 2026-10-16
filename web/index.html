@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickBite | Smart Canteen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand-mark"><span>QB</span></div>
+            <div class="brand-copy">
+                <strong>QuickBite</strong>
+                <small>Smart canteen</small>
+            </div>
+            <nav class="main-nav" aria-label="Main navigation">
+                <button class="nav-link active" data-view="studentView"><span>+</span> Order food</button>
+                <button class="nav-link" data-view="staffView"><span>~</span> Staff queue</button>
+            </nav>
+            <div class="sidebar-note">
+                <span class="live-dot"></span>
+                <div><strong>Kitchen live</strong><small>Average prep: 12 min</small></div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">Tuesday, 14 October 2026</p>
+                    <h1 id="pageTitle">Your best break starts here.</h1>
+                </div>
+                <div class="header-actions">
+                    <span class="service-pill"><i></i> Open until 4:30 PM</span>
+                    <button class="avatar" title="Current user">AS</button>
+                </div>
+            </header>
+
+            <section id="studentView" class="view active-view">
+                <div class="welcome-strip">
+                    <div>
+                        <span class="tag">QUICK PICK</span>
+                        <h2>Made fresh for your next little break.</h2>
+                        <p>Thoughtful food, friendly service, and one less queue to worry about.</p>
+                    </div>
+                    <div class="strip-art" aria-hidden="true"><span>🥪</span><span>☕</span><span>🍟</span></div>
+                </div>
+
+                <div class="content-grid">
+                    <section class="menu-section">
+                        <div class="section-heading">
+                            <div><p class="eyebrow">Today's menu</p><h2>Pick your favourites</h2></div>
+                            <label class="search-box"><span>⌕</span><input id="menuSearch" type="search" placeholder="Search menu"></label>
+                        </div>
+                        <div id="menuGrid" class="menu-grid"></div>
+                    </section>
+
+                    <aside class="order-panel">
+                        <div class="panel-heading"><div><p class="eyebrow">Your order</p><h2 id="cartCount">Cart is empty</h2></div><span class="order-icon">🛍</span></div>
+                        <div id="cartItems" class="cart-items"><div class="empty-cart"><span>+</span><p>Add something delicious<br>from the menu</p></div></div>
+                        <div class="bill-summary">
+                            <div><span>Subtotal</span><strong id="subtotal">Rs. 0.00</strong></div>
+                            <div><span>Tax (5%)</span><strong id="tax">Rs. 0.00</strong></div>
+                            <div class="total-row"><span>Total</span><strong id="total">Rs. 0.00</strong></div>
+                        </div>
+                        <button id="checkoutButton" class="primary-button" disabled>Review and place order <span>→</span></button>
+                        <p class="secure-note">Orders are saved securely to your QuickBite history.</p>
+                    </aside>
+                </div>
+            </section>
+
+            <section id="staffView" class="view">
+                <div class="staff-heading"><div><span class="tag">STAFF CONSOLE</span><h2>Keep the line moving.</h2><p>Manage today's kitchen flow from one calm dashboard.</p></div><button class="outline-button" id="refreshQueue">↻ Refresh queue</button></div>
+                <div class="stats-row">
+                    <div class="stat-card"><span class="stat-label">Active orders</span><strong id="activeOrders">1</strong><span class="stat-foot amber">Needs attention</span></div>
+                    <div class="stat-card"><span class="stat-label">Ready to collect</span><strong id="readyOrders">0</strong><span class="stat-foot green">On schedule</span></div>
+                    <div class="stat-card"><span class="stat-label">Today's sales</span><strong id="salesTotal">Rs. 0</strong><span class="stat-foot blue">Completed orders</span></div>
+                </div>
+                <div class="staff-grid">
+                    <section class="queue-panel"><div class="section-heading compact"><div><p class="eyebrow">Kitchen activity</p><h2>Live order queue</h2></div><span class="queue-count">3 stages</span></div><div id="queueList" class="queue-list"></div></section>
+                    <section class="restock-panel"><div class="section-heading compact"><div><p class="eyebrow">Inventory</p><h2>Stock watch</h2></div></div><div id="stockList" class="stock-list"></div></section>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div id="toast" class="toast" role="status"></div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+101|Veg Sandwich|50.00|8|1
+102|Cold Coffee|60.00|9|1
+103|French Fries|80.00|9|1
+104|Paneer Wrap|90.00|5|1
+105|Masala Chai|30.00|9|1
+106|Samosa Plate|40.00|8|1
+107|Lemon Soda|45.00|8|1
+108|Chocolate Muffin|55.00|8|1
